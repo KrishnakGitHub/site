@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Entrepreneurship and Management | IIT Hyderabad</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- <script src="https://kit.fontawesome.com/3aa7ed338d.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./css/style-1.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="spinner-grow text-primary" id="loading" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <!--Header-->
+    <header>
+        <nav class="navbar navbar-expand-lg py-2 py-lg-3 shadow-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div class="row logo-text-container">
+                        <div class="col p-0">
+                            <img src="./images/logo.png" alt="University Logo" class="logo img-fluid">
+                        </div>
+                        <div class="col p-0 text">
+                            <span class="dp-text">Department of Entrepreneurship and Management</span>
+                            <span class="inst-text">Indian Institute of Technology Hyderabad</span>
+                        </div>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-light"><i class="bi bi-list"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active " aria-current="page" href="index.html"><span>Home</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>About Us <i class="bi bi-chevron-down"></i></span> 
+                            </a>
+                            <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">The Director’s Message</a></li>
+                                <li><a class="dropdown-item" href="#">The Head’s Message</a></li>
+                                <li><a class="dropdown-item" href="#">Vision and Mission</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Programs <i class="bi bi-chevron-down"></i></span> 
+                            </a>
+                            <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="m_tech.html">M.Tech.</a></li>
+                                <li><a class="dropdown-item" href="#">Dual Degree</a></li>
+                                <li><a class="dropdown-item" href="#">PHD</a></li>
+                                <li><a class="dropdown-item" href="#">Minors</a></li>
+                                <li><a class="dropdown-item" href="#">Certified Cources</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>People <i class="bi bi-chevron-down"></i></span> 
+                            </a>
+                            <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="compiler.html"><span>Faculty</span></a></li>
+                                <li><a class="dropdown-item" href="#"><span>Student</span></a></li>
+                                <li><a class="dropdown-item" href="#"><span>Staff</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span>Research</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="enterprise.html"><span>Events</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- profiles -->
+    <div class="container" id="profilesContainer">
+        <h1 class="text-center mt-4 mb-5">Faculty Profiles</h1>
+        <div class="row" id="profilesRow">
+            <!-- Student profiles will be dynamically added here -->
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row px-3 px-md-0">
+                <div class="d-block em-txt">
+                    <a class="navbar-brand dark mb-3" href="#">
+                        <img src="images/logo.png" class="img-fluid" alt="Logo">
+                    </a>
+                    <span class="mx-2 d-inline">Department Of Entrepreneurship and Management</span>
+                </div>
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-3">
+                        <address>
+                            <span class="contact"><i class="bi bi-envelope"></i> <b> office@em.iith.ac.in</b></span>
+                            <span class="contact"><i class="bi bi-telephone"></i> +91 8500 099 499</span>
+                            <p>
+                                <b>Department of Entrepreneurship and Management,</b>
+                                Indian Institute of Technology Hyderabad,<br>
+                                Kandi, Sangareddy,<br>Telangana,<br> India. 502285.
+                            </p>
+                        </address>
+                    </div>
+                    <div class="col-lg-3 col-6 mt-4 mt-md-0">
+                        <ul>
+                            <li>Menu</li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Acadmics</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Programs</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-6 mt-4 mt-md-0">
+                        <ul>
+                            <li>Menu</li>
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-md-0 d-flex justify-content-center">
+                    <ul>
+                        <div class="col-lg-6 d-flex">
+                            <li class="mx-0 me-md-3 px-md-0 px-1"><a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
+                            <li class="mx-0 me-md-3 px-md-0 px-1"><a href="#" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                            <li class="mx-0 me-md-3 px-md-0 px-1"><a href="#" target="_blank"><i class="bi bi-youtube"></i></a></li>
+                            <li class="mx-0 me-md-3 px-md-0 px-1"><a href="#" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const loading = document.getElementById('loading');
+    loading.style.display = 'block';
+    let FULL_URL = 'https://script.google.com/macros/s/AKfycbyvgh9UYvH_AQ7Q8076RaF5-DPg35Ke5ZzklVQxkNIepuB4WFgyUcvbxbDtoeJSy-v-/exec';
+    
+    fetch(FULL_URL)
+    .then(response => {
+        loading.style.display = 'none';
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(studentsData => {
+        console.log(studentsData.data)
+        if (!Array.isArray(studentsData.data)) {
+            throw new Error('Fetched data is not an array');
+        }
+        const profilesRow = document.getElementById('profilesRow');
+        
+        // studentsData is an object with a 'data' property containing an array of student objects
+        studentsData.data.slice(1).forEach(student => {
+            const cardColumn = document.createElement('div');
+            cardColumn.classList.add('col-md-6');
+            
+            const card = document.createElement('div');
+            card.classList.add('card', 'mb-4');
+            
+            const row = document.createElement('div');
+            row.classList.add('row', 'no-gutters');
+            
+            const imageColumn = document.createElement('div');
+            imageColumn.classList.add('col-md-4');
+            
+            const image = document.createElement('img');
+            image.classList.add('card-img');
+            image.src = student.image;
+            image.alt = student.name;
+            
+            const cardBodyColumn = document.createElement('div');
+            cardBodyColumn.classList.add('col-md-8');
+
+            const cardBody = document.createElement('div');
+            cardBody.classList.add('card-body');
+            
+            const title = document.createElement('h5');
+            title.classList.add('card-title');
+            title.textContent = student.name;
+            
+            const age = document.createElement('p');
+            age.classList.add('card-text');
+            age.textContent = `${student.roll_number}`;
+            
+            const major = document.createElement('p');
+            major.classList.add('card-text');
+            major.textContent = `${student.email}`;
+            
+            cardBody.appendChild(title);
+            cardBody.appendChild(age);
+            cardBody.appendChild(major);
+            
+            imageColumn.appendChild(image);
+            cardBodyColumn.appendChild(cardBody);
+            
+            row.appendChild(imageColumn);
+            row.appendChild(cardBodyColumn);
+            
+            // Append row to the card
+            card.appendChild(row);
+            
+            // Append card to the column
+            cardColumn.appendChild(card);
+            
+            // Append column to the profiles row
+            profilesRow.appendChild(cardColumn);
+        });
+    })
+    .catch(error => {
+        loading.style.display = 'none';
+        console.error('There was a problem with the fetch operation:', error);
+    });
+});
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
