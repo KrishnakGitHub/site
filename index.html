@@ -411,7 +411,7 @@
         document.addEventListener("DOMContentLoaded", function() {
     // const loading = document.getElementById('loading');
     // loading.style.display = 'block';
-    let FULL_URL = "https://script.google.com/macros/s/AKfycbzT_iL2jq751qaZkQJ_SZ1IQSZebByYaVAypufrZOjnfshiTYIFPemoN_ZcriOp5XWC/exec";
+    let FULL_URL = "https://script.google.com/macros/s/AKfycbxfmtkBmToMKt-JdLBP9AAywr5YyAoj3ZpB2pU857_aIxUykA9tJTIJ7B06UART9-Kx/exec";
     
     fetch(FULL_URL)
     .then(response => {
@@ -449,7 +449,7 @@
                                     </div>
                                     <div class="info">
                                         <h6 class="mb-1">${event.title.substring(0,24)}...</h6>
-                                        <small class="text-body-secondary">venue</small>
+                                        <small class="text-body-secondary">${event.venue}</small>
                                     </div>
                                 </div>
                             </a>
@@ -462,7 +462,7 @@
         eventsData.data[1].forEach(news => {
             News.innerHTML += `
             <div class="d-flex w-100 justify-content-between align-items-center mb-2">
-                <a href="#" style="text-decoration:none;">${news.title}</a>
+                <a href="${news.link}" style="text-decoration:none;">${news.title}</a>
                 <small class="text-body-secondary">${news.date}</small>
             </div>
             `;
@@ -491,7 +491,7 @@
     document.addEventListener("DOMContentLoaded", function() {
     // const loading = document.getElementById('loading');
     // loading.style.display = 'block';
-    let FULL_URL = "https://script.google.com/macros/s/AKfycbzT_iL2jq751qaZkQJ_SZ1IQSZebByYaVAypufrZOjnfshiTYIFPemoN_ZcriOp5XWC/exec";
+    let FULL_URL = "https://script.google.com/macros/s/AKfycbz9G4ijVptKdJapeDfFT8SiLGPOxT8Xr-ChtIklDWSfU7xOYQg8CXImXkxUm3ODyzjZ/exec";
     fetch(FULL_URL)
     .then(response => {
     return response.json();
