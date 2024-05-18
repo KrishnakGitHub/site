@@ -118,120 +118,31 @@
         </nav>
     </header>
 
-        <!-- Filter -->
-        <div class="container" id="profilesContainer">
+    <h2 class="heading text-center mb-5"><span>Events</span></h2>
+    <div class="container form-container">
+        <div class="">
             <form id="yearForm">
-                <label for="yearSelect">Year</label>
-                <select id="yearSelect" name="year" onchange="submitForm()">
-                  <option value="2021">2021</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
-                  <option value="2024">2024</option>
-                  <option value="2025">2025</option>
-                </select>
-              </form>
-            <div class="row" id="">
-            </div>
+                <select id="yearSelect" name="year" onchange="submitForm()"></select>
+            </form>
         </div>
+    </div>
+
+    
 
     <!-- Events Section -->
     <section class="events-section">
         <div class="container py-5">
-            <h2 class="text-center mb-5"><span>Upcoming Events</span></h2>
-    
-            <div class="row row-cols-1 row-cols-md-4 g-4" id="upcomingEvents">
-                <!-- <div class="col">
-                    <div class="event-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Event 1</h5>
-                            <p class="card-text">Start Date: January 15, 2025</p>
-                            <p class="card-text">End Date: January 17, 2025</p>
-                            <p class="card-text">Venue: Your Venue</p>
-                            <p class="card-text">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <button class="google-calendar-btn">Add to Google Calendar</button>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col">
-                    <div class="event-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Event 2</h5>
-                            <p class="card-text">Start Date: February 20, 2025</p>
-                            <p class="card-text">End Date: February 22, 2025</p>
-                            <p class="card-text">Venue: Your Venue</p>
-                            <p class="card-text">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <button class="google-calendar-btn">Add to Google Calendar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="event-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Event 2</h5>
-                            <p class="card-text">Start Date: February 20, 2025</p>
-                            <p class="card-text">End Date: February 22, 2025</p>
-                            <p class="card-text">Venue: Your Venue</p>
-                            <p class="card-text">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <button class="google-calendar-btn">Add to Google Calendar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="event-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Event 2</h5>
-                            <p class="card-text">Start Date: February 20, 2025</p>
-                            <p class="card-text">End Date: February 22, 2025</p>
-                            <p class="card-text">Venue: Your Venue</p>
-                            <p class="card-text">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <button class="google-calendar-btn">Add to Google Calendar</button>
-                        </div>
-                    </div>
-                </div> -->
-    
-                <!-- Add more event cards here -->
-    
-            </div>
+            <h4 class="subheading mb-5"><span>Upcoming Events</span></h4>
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="upcomingEvents"></div>
         </div>
 
         <div class="container py-5">
-            <h2 class="text-center mb-5"><span>Latest Events</span></h2>
-    
-            <div class="row row-cols-1 row-cols-md-4 g-4" id="latestEvents">
-                <!-- <div class="col">
-                    <div class="event-card">
-                        <img src="./images/free-images.jpeg" class="card-img-top" alt="Event 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Event 1</h5>
-                            <p class="card-text">Start Date: January 15, 2025</p>
-                            <p class="card-text">End Date: January 17, 2025</p>
-                            <p class="card-text">Venue: Your Venue</p>
-                            <p class="card-text">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col">
-                    <div class="event-card">
-                        <img src="./images/act2.png" class="card-img-top" alt="Event 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Event 2</h5>
-                            <p class="card-text">Start Date: February 20, 2025</p>
-                            <p class="card-text">End Date: February 22, 2025</p>
-                            <p class="card-text">Venue: Your Venue</p>
-                            <p class="card-text">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div> -->
-    
-                <!-- Add more event cards here -->
-    
-            </div>
+            <h5 class="subheading mb-5"><span>Past Events</span></h5>
+            <!-- <div class="row row-cols-1 row-cols-md-4 g-4" id="latestEvents"></div> -->
+            <div class="accordion accordion-flush" id="latestEvents"></div>
         </div>
     </section>
+    
         <!-- Footer -->
         <footer class="py-5">
             <div class="container">
@@ -300,106 +211,131 @@
 <script src="./js/main.js"></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let year = new URLSearchParams(window.location.search).get('year');
-        if(year==null){
-            let date = new Date();
-            year = date.getFullYear(); 
-        }
+document.addEventListener("DOMContentLoaded", function() {
+    const loading = document.getElementById('loading');
+    loading.style.display = 'flex';
+
+    let year = new URLSearchParams(window.location.search).get('year');
+    let date = new Date();
+    currentYear = date.getFullYear(); 
+    const yearSelect = document.getElementById('yearSelect');
     
-        document.getElementById('yearSelect').value = year;
-        const loading = document.getElementById('loading');
-        loading.style.display = 'flex';
-        let FULL_URL = 'https://script.google.com/macros/s/AKfycbz91QrFa9AGNwdkIeUaNtJDdXHxJ15-QoxIva9fGfOwOGjR8PJI8y75Rmv4FhU-2mrU/exec?year='+year+'';
-        
-        fetch(FULL_URL)
-        .then(response => {
-            loading.style.display = 'none';
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-.then(eventsData => {
-    console.log(eventsData.data);
-    if (!Array.isArray(eventsData.data)) {
-        throw new Error('Fetched data is not an array');
+    for (var i = 2022; i <= currentYear; i++) {
+        var option = new Option(i, i);
+        yearSelect.add(option);
     }
-    // const profilesRow = document.getElementById('profilesRow');
+
+    if(year==null){
+        year = currentYear;
+    }
+    yearSelect.value = year;
+        
+    let FULL_URL = 'https://script.google.com/macros/s/AKfycbxGOAfMChAecGoo2HSZbN9LarR0vjh9UuzQiFzEbxIZOOkn4DmqgujJyVEOmsugow6x/exec?year='+year+'';
+    
+    fetch(FULL_URL)
+    .then(response => {
+        loading.style.display = 'none';
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(eventsData => {
+        console.log(eventsData.data);
+        if (!Array.isArray(eventsData.data)) {
+            throw new Error('Fetched data is not an array');
+        }
+        
     const upcomingEvents = document.getElementById('upcomingEvents');
     const latestEvents = document.getElementById('latestEvents');
+    let upcoming = true;
+    let past = true;
 
-    // eventsData is an object with a 'data' property containing an array of event objects
     eventsData.data.forEach(event => {
-
+        
         let upcomingEventsCount = 0;
         let latestEventsCount = 0;
+        
+        const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
         const currentDate = new Date();
         const eventDate = new Date(event.start_date);
+        const end_eventDate = new Date(event.end_data);
+        const month_name = month[eventDate.getMonth()]
+        const end_month_name = month[end_eventDate.getMonth()]
 
-        const cardColumn = document.createElement('div');
-        cardColumn.classList.add('col');
+        const latestEvents = document.getElementById('latestEvents');
+        const upcomingEvents = document.getElementById('upcomingEvents');
 
-        const eventCard = document.createElement('div');
-        eventCard.classList.add('event-card');
 
-        const image = document.createElement('img');
-        image.classList.add('card-img-top');
-        image.src = event.image;
-        image.alt = event.title;
-
-        const cardBody = document.createElement('div');
-        cardBody.classList.add('card-body');
-
-        const title = document.createElement('h5');
-        title.classList.add('card-title');
-        title.textContent = event.title;
-
-        const startDate = document.createElement('p');
-        startDate.classList.add('card-text');
-        startDate.textContent = `Start Date: ${event.startDate}`;
-
-        const endDate = document.createElement('p');
-        endDate.classList.add('card-text');
-        endDate.textContent = `End Date: ${event.endDate}`;
-
-        const venue = document.createElement('p');
-        venue.classList.add('card-text');
-        venue.textContent = `Venue: ${event.venue}`;
-
-        const description = document.createElement('p');
-        description.classList.add('card-text');
-        description.textContent = `Description: ${event.description}`;
-
-        const googleCalendarBtn = document.createElement('button');
-        googleCalendarBtn.classList.add('google-calendar-btn', 'btn', 'btn-primary');
-        googleCalendarBtn.textContent = 'Add to Google Calendar';
-
-        cardBody.appendChild(title);
-        cardBody.appendChild(startDate);
-        cardBody.appendChild(endDate);
-        cardBody.appendChild(venue);
-        cardBody.appendChild(description);
-        if (eventDate > currentDate) {
-        cardBody.appendChild(googleCalendarBtn);
+        function hideImg() {
+            document.getElementById("HideImg").style.display = "none";
         }
 
-        if (event.image) {
-        eventCard.appendChild(image);
-        }
-        eventCard.appendChild(cardBody);
-
-        cardColumn.appendChild(eventCard);
-
         if (eventDate > currentDate) {
-            upcomingEvents.appendChild(cardColumn);
+            upcomingEvents.innerHTML += `
+            <div class="col">
+                <div class="event-card">
+                    <img src="${event.image}" id="HideImg" class="card-img-top" onerror="hideImg()"/>
+                    <div class="card-body">
+                        <h5 class="card-title">${event.title}</h5>
+                        <p class="card-text">${event.start_date}  - ${event.endDate}</p>
+                        <p class="card-text">${event.venue}</p>
+                        <p class="card-text">${event.description}</p>
+                    </div>
+                </div>
+            </div>
+            `
             upcomingEventsCount++;
+            past = false;
         } 
         else {
-            latestEvents.appendChild(cardColumn);
+            latestEvents.innerHTML += `
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${event.id}" aria-expanded="false" aria-controls="flush-collapseOne">
+                        ${event.title}
+                    </button>
+                </h2>
+                    <div id="flush-collapse${event.id}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="event-card">
+                    <img src="${event.image}" id="HideImg" class="card-img-top" onerror="hideImg()"/>
+                    <div class="card-body">
+                        <h5 class="card-title">${event.title}</h5>
+                        <p class="card-text">${eventDate.getDay()}, ${month_name} ${eventDate.getFullYear()}  - ${end_eventDate.getDay()}, ${end_month_name} ${end_eventDate.getFullYear()}</p>
+                        <p class="card-text">${event.venue}</p>
+                        <p class="card-text">${event.description}</p>
+                    </div>
+                </div>
+                </div>
+            </div>`
+
             latestEventsCount++;
+            upcoming = false;
         }
     });
+    if(!past){
+            latestEvents.innerHTML += `
+                <div class="col">
+                <div class="event-card">
+                    <div class="card-body">
+                        <p class="card-text">No Past Events!</p>
+                    </div>
+                </div>
+            </div>
+                `
+        }
+
+        if(!upcoming){
+            upcomingEvents.innerHTML += `
+                <div class="col">
+                <div class="event-card">
+                    <div class="card-body">
+                        <p class="card-text">Events are coming soon!</p>
+                    </div>
+                </div>
+            </div>
+                `
+        }
 })
 
         .catch(error => {

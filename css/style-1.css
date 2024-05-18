@@ -212,6 +212,8 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 
 
 /* Main Content */
+
+/* common */
 .heading {
     text-align: center;
     font-size: 1.75rem;
@@ -223,19 +225,6 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 .heading span {
     position: relative; 
 }
-
-/* .heading span::before {
-    background: #fef6f2;
-    width: 200px;
-    height: 60px;
-    display: inline-block;
-    content: "";
-    position: absolute;
-    border-radius: 0%;
-    z-index: -1;
-    top: -15px;
-    left: -35px;
-} */
 
 .heading span::after {
     /* background: #fef6f2; */
@@ -250,6 +239,70 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
     top: 36px;
     left: 2px;
     padding-bottom: 5px;
+}
+
+.subheading{
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.subheading span {
+    background-color: #fff;
+    padding-right: 10px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.subheading span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5em;
+    border-top: 3px solid #f8714c;
+    z-index: -1;
+  }
+
+.form-container {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 0px 80px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  /* input::-webkit-datetime-edit-month-field,
+  ::-webkit-datetime-edit-day-field,
+  ::-webkit-datetime-edit-text {
+    display:none;
+  }
+   */
+
+   ::-webkit-datetime-edit-month-field { color: white; }
+::-webkit-datetime-edit-day-field { color: red; }
+::-webkit-datetime-edit-year-field { color: red; }
+::-webkit-calendar-picker-indicator { background:gray; }
+
+  input[type="month"]::-webkit-calendar-picker {
+    display: none;
 }
 
 /* program offered */
@@ -312,7 +365,7 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 }
 
 
-/* News */
+/* Home - News */
 .news-section {
     display: flex;
     justify-content: center;
@@ -488,7 +541,11 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
 }
 
 
+/* events-section */
 
+.events-section{
+    padding: 0px 80px;
+}
 
 /* Footer */
 .contact i{
