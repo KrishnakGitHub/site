@@ -7,7 +7,12 @@
  // Loop through the links
  for (var i = 0; i < links.length; i++) {
    // If the link's href matches the current URL, add the active class
-   if (links[i].href === currentUrl) {
+   if (links[i].href == currentUrl && links[i].href!="#" || currentUrl.includes(links[i].href) && links[i].href!="#") {
      links[i].classList.add('active');
    }
  }
+
+
+
+
+

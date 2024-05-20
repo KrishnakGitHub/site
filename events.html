@@ -24,7 +24,7 @@
     <header>
         <nav class="navbar navbar-expand-lg py-2 py-lg-3 shadow-lg">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href=".">
                     <div class="row logo-text-container">
                         <div class="col p-0">
                             <img src="./images/logo.png" alt="University Logo" class="logo img-fluid">
@@ -41,16 +41,16 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html"><span>Home</span></a>
+                            <a class="nav-link" aria-current="page" href="./index.html" id="home"><span>Home</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>About Us <i class="bi bi-chevron-down"></i></span> 
                             </a>
                             <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="./director_message.html">The Director’s Message</a></li>
-                                <li><a class="dropdown-item" href="./hod_message.html">The Head’s Message</a></li>
-                                <li><a class="dropdown-item" href="./v&m.html">Vision and Mission</a></li>
+                                <li><a class="dropdown-item" href="./v&m.html" id="vandm"> <span> Vision and Mission</span></a></li>
+                                <li><a class="dropdown-item" href="./director_message.html" id="director_message"> <span> The Director’s Message</span></a></li>
+                                <li><a class="dropdown-item" href="./hod_message.html" id="hod_message"> <span> The Head’s Message</span></a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -58,11 +58,11 @@
                                 <span>Programs <i class="bi bi-chevron-down"></i></span> 
                             </a>
                             <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">M.Tech.</a></li>
-                                <li><a class="dropdown-item" href="#">Dual Degree</a></li>
-                                <li><a class="dropdown-item" href="#">PHD</a></li>
-                                <li><a class="dropdown-item" href="#">Minors</a></li>
-                                <li><a class="dropdown-item" href="#">Certified Cources</a></li>
+                                <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> M.Tech</span>.</a></li>
+                                <li><a class="dropdown-item" href="./dual_degree_program.html" id="dualdegree_pro"><span> Dual Degree</span></a></li>
+                                <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PHD</span></a></li>
+                                <li><a class="dropdown-item" href="./minors_program.html" id="minors_pro"><span> Minors</span></a></li>
+                                <li><a class="dropdown-item" href="./cirtifiedCourses_program.html" id="cirtifiedCourses_pro"><span> Certified Cources</span></a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -70,47 +70,28 @@
                                 <span>People <i class="bi bi-chevron-down"></i></span> 
                             </a>
                             <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="faculty.html"><span>Faculty</span></a></li>
-                                <!-- <li><a class="dropdown-item" href="#"><span>Student</span></a></li> -->
+                                <li><a class="dropdown-item" href="./faculty.html" id="drop_p"><span>Faculty</span></a></li>
                                 <li class="dropend">
-                                    <a class="dropdown-item dropbtn"><span>Student</span></a>
+                                    <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Student <i class="bi bi-chevron-right"></i></span></a>
                                     <ul class="dropdown-content dropdown-menu shadow">
-                                        <a class="dropdown-item" href="m_tech.html"><span>M.Tech</span></a>
-                                        <a class="dropdown-item" href="phd_students.html"><span>PHD</span></a>
-                                        <!-- <a class="dropdown-item" href="#">Link 3</a> -->
+                                        <a class="dropdown-item" href="./m_tech_students.html" id="drop_p"><span>M.Tech</span></a>
+                                        <a class="dropdown-item" href="./phd_students.html" id="drop_p"><span>PHD</span></a>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="#"><span>Staff</span></a></li>
+                                <li><a class="dropdown-item" href="./staff.html" id="drop_p"><span>Staff</span></a></li>
                             </ul>
-                            
-                            <!-- <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="compiler.html"><span>Faculty</span></a></li>
-                                <li><a class="dropdown-item" href="#"><span>Student</span></a></li>
-                                <li><a class="dropdown-item" href="#"><span>Staff</span></a></li>
-                                
-                                <li class="dropdown-item dropend">
-                                    <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-                                    <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item" href="#">Action</a></li>
-                                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                      <li><hr class="dropdown-divider"></li>
-                                      <li><a class="dropdown-item" href="#">Separated link</a></li>
-                                    </ul>
-                                  </li>
-                            </ul> -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span>Research</span></a>
+                            <a class="nav-link" href="./research.html" id="research"><span>Research</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="events.html"><span>Events</span></a>
+                            <a class="nav-link" href="./events.html" id="events"><span>Events</span></a>
                         </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="./blog_list.html" id="blog"><span>Startups</span></a>
+                        </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="blog_list.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="./contact.html" id="contact"><span>Contact</span></a>
                         </li>
                     </ul>
                 </div>
@@ -118,7 +99,9 @@
         </nav>
     </header>
 
-    <h2 class="heading text-center mb-5"><span>Events</span></h2>
+    <h2 class="heading text-center mb-5"><span>Events At DEM</span></h2>
+    
+
     <div class="container form-container">
         <div class="">
             <form id="yearForm">
@@ -127,61 +110,57 @@
         </div>
     </div>
 
-    
 
     <!-- Events Section -->
     <section class="events-section">
-        <div class="container py-5">
+        <div class="container py-5" id="upev">
             <h4 class="subheading mb-5"><span>Upcoming Events</span></h4>
             <div class="row row-cols-1 row-cols-md-4 g-4" id="upcomingEvents"></div>
         </div>
 
+
         <div class="container py-5">
             <h5 class="subheading mb-5"><span>Past Events</span></h5>
-            <!-- <div class="row row-cols-1 row-cols-md-4 g-4" id="latestEvents"></div> -->
-            <div class="accordion accordion-flush" id="latestEvents"></div>
+            <div class="row row-cols-1 row-cols-md-4 g-4" id="latestEvents"></div>
+            <!-- <div class="accordion accordion-flush" id="latestEvents"></div> -->
         </div>
     </section>
     
         <!-- Footer -->
         <footer class="py-5">
             <div class="container">
-                <div class="row px-3 px-md-0">
-                    <div class="d-block em-txt">
-                        <a class="navbar-brand dark mb-3" href="#">
+                <div class="row px-md-0">
+                    <div class="d-block">
+                        <a class="navbar-brand dark" href="#">
                             <img src="images/logo.png" class="img-fluid" alt="Logo">
+                            <sapn class="mx-2 em-txt">Department Of Entrepreneurship and Management</span>
                         </a>
-                        <span class="mx-2 d-inline">Department Of Entrepreneurship and Management</span>
                     </div>
                     <div class="row d-flex justify-content-between">
                         <div class="col-lg-3">
                             <address>
                                 <span class="contact"><i class="bi bi-envelope"></i> <b> office@em.iith.ac.in</b></span>
-                                <span class="contact"><i class="bi bi-telephone"></i> +91 8500 099 499</span>
-                                <p>
-                                    <b>Department of Entrepreneurship and Management,</b>
-                                    Indian Institute of Technology Hyderabad,<br>
-                                    Kandi, Sangareddy,<br>Telangana,<br> India. 502285.
-                                </p>
+                                <p><small>
+                                <span class="text-nowrap">Department Of Entrepreneurship and Management,</span><br>
+                                <span class="text-nowrap">Indian Institute of Technology Hyderabad,</span><br>
+                                <span class="text-nowrap">Kandi, Sangareddy,</span><br>
+                                <span class="text-nowrap">Telangana, India. 502285.</span>
+                                </small></p>
                             </address>
                         </div>
                         <div class="col-lg-3 col-6 mt-4 mt-md-0">
                             <ul>
-                                <li>Menu</li>
+                                <li>Important Links</li>
                                 <li><a href="#">Home</a></li>
-                                <li><a href="#">Acadmics</a></li>
-                                <li><a href="#">Projects</a></li>
-                                <li><a href="#">Programs</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-6 mt-4 mt-md-0">
                             <ul>
-                                <li>Menu</li>
-                                <li><a href="#">Blogs</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li>Important Links</li>
+                                <li><a href="#">Programs</a></li>
+                                <li><a href="#">Projects</a></li>
                             </ul>
                         </div>
                     </div>
@@ -211,6 +190,11 @@
 <script src="./js/main.js"></script>
 
 <script>
+
+function hideImg() {
+    document.getElementById("HideImg").style.display = "none";
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const loading = document.getElementById('loading');
     loading.style.display = 'flex';
@@ -241,35 +225,30 @@ document.addEventListener("DOMContentLoaded", function() {
         return response.json();
     })
     .then(eventsData => {
-        console.log(eventsData.data);
         if (!Array.isArray(eventsData.data)) {
             throw new Error('Fetched data is not an array');
         }
         
     const upcomingEvents = document.getElementById('upcomingEvents');
     const latestEvents = document.getElementById('latestEvents');
-    let upcoming = true;
-    let past = true;
+
+    let upcomingEventsCount = 0;
+    let latestEventsCount = 0;
 
     eventsData.data.forEach(event => {
-        
-        let upcomingEventsCount = 0;
-        let latestEventsCount = 0;
-        
-        const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
         const currentDate = new Date();
         const eventDate = new Date(event.start_date);
         const end_eventDate = new Date(event.end_data);
-        const month_name = month[eventDate.getMonth()]
-        const end_month_name = month[end_eventDate.getMonth()]
 
         const latestEvents = document.getElementById('latestEvents');
         const upcomingEvents = document.getElementById('upcomingEvents');
 
-
-        function hideImg() {
-            document.getElementById("HideImg").style.display = "none";
+        if (currentYear!=year){
+            console.log('yes');
+            document.getElementById('upev').style.display = 'none';
         }
+
 
         if (eventDate > currentDate) {
             upcomingEvents.innerHTML += `
@@ -278,63 +257,76 @@ document.addEventListener("DOMContentLoaded", function() {
                     <img src="${event.image}" id="HideImg" class="card-img-top" onerror="hideImg()"/>
                     <div class="card-body">
                         <h5 class="card-title">${event.title}</h5>
-                        <p class="card-text">${event.start_date}  - ${event.endDate}</p>
+                        <p class="card-text">${eventDate.toDateString().slice(3,)}</p>
                         <p class="card-text">${event.venue}</p>
                         <p class="card-text">${event.description}</p>
                     </div>
                 </div>
-            </div>
-            `
+            </div>`
+        
+        
             upcomingEventsCount++;
-            past = false;
         } 
         else {
             latestEvents.innerHTML += `
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${event.id}" aria-expanded="false" aria-controls="flush-collapseOne">
-                        ${event.title}
-                    </button>
-                </h2>
-                    <div id="flush-collapse${event.id}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="event-card">
+            <div class="col">
+                <div class="event-card">
                     <img src="${event.image}" id="HideImg" class="card-img-top" onerror="hideImg()"/>
                     <div class="card-body">
                         <h5 class="card-title">${event.title}</h5>
-                        <p class="card-text">${eventDate.getDay()}, ${month_name} ${eventDate.getFullYear()}  - ${end_eventDate.getDay()}, ${end_month_name} ${end_eventDate.getFullYear()}</p>
+                        <p class="card-text event_date">${eventDate.toDateString()!='Invalid Date'?eventDate.toDateString().slice(3,):'----'}</p>
                         <p class="card-text">${event.venue}</p>
-                        <p class="card-text">${event.description}</p>
-                    </div>
-                </div>
-                </div>
-            </div>`
-
-            latestEventsCount++;
-            upcoming = false;
-        }
-    });
-    if(!past){
-            latestEvents.innerHTML += `
-                <div class="col">
-                <div class="event-card">
-                    <div class="card-body">
-                        <p class="card-text">No Past Events!</p>
+                        <p class="card-text">${event.description.slice(0, 100)}...</p>
+                        <button class="btn btn-sm btn-white" data-bs-toggle="modal" data-bs-target="#eventModal${event.id}">Read More</button>
                     </div>
                 </div>
             </div>
-                `
-        }
 
-        if(!upcoming){
-            upcomingEvents.innerHTML += `
-                <div class="col">
+            <!-- Modal -->
+                <div class="modal fade" id="eventModal${event.id}" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel${event.id}" aria-hidden="true">
+                    <div class="modal-dialog model-xl modal-dialog-centered modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="eventModalLabel${event.id}">${event.title}</h5>
+                            </div>
+                            <div class="modal-body">
+                                <img src="${event.image}" class="img-fluid mb-3"/>
+                                <p class="card-text event_date">${eventDate.toDateString()!='Invalid Date'?eventDate.toDateString().slice(3,):'----'}</p>
+                                <p class="card-text">${event.venue}</p>
+                                <p>${event.description}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            latestEventsCount++;
+        }
+    });
+    
+    if(upcomingEventsCount==0){
+            upcomingEvents.innerHTML += 
+            `<div class="col">
                 <div class="event-card">
                     <div class="card-body">
                         <p class="card-text">Events are coming soon!</p>
                     </div>
                 </div>
-            </div>
-                `
+            </div>`
+        }
+    
+        if(latestEventsCount==0){
+            upcomingEvents.innerHTML += 
+            `<div class="col">
+                <div class="event-card">
+                    <div class="card-body">
+                        <p class="card-text">No Past Events!</p>
+                    </div>
+                </div>
+            </div>`
         }
 })
 
