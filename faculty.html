@@ -22,14 +22,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="spinner-grow text-primary" id="loading" role="status">
-        <span class="visually-hidden">Loading...</span>
-    </div>
     <!--Header-->
     <header>
         <nav class="navbar navbar-expand-lg py-2 py-lg-3 shadow-lg">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href=".">
                     <div class="row logo-text-container">
                         <div class="col p-0">
                             <img src="./images/logo.png" alt="University Logo" class="logo img-fluid">
@@ -46,16 +43,16 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active " aria-current="page" href="index.html"><span>Home</span></a>
+                            <a class="nav-link" aria-current="page" href="./index.html" id="home"><span>Home</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>About Us <i class="bi bi-chevron-down"></i></span> 
                             </a>
                             <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">The Director’s Message</a></li>
-                                <li><a class="dropdown-item" href="#">The Head’s Message</a></li>
-                                <li><a class="dropdown-item" href="#">Vision and Mission</a></li>
+                                <li><a class="dropdown-item" href="./v&m.html" id="vandm"> <span> Vision and Mission</span></a></li>
+                                <li><a class="dropdown-item" href="./director_message.html" id="director_message"> <span> The Director’s Message</span></a></li>
+                                <li><a class="dropdown-item" href="./hod_message.html" id="hod_message"> <span> The Head’s Message</span></a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -63,11 +60,11 @@
                                 <span>Programs <i class="bi bi-chevron-down"></i></span> 
                             </a>
                             <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="m_tech.html">M.Tech.</a></li>
-                                <li><a class="dropdown-item" href="#">Dual Degree</a></li>
-                                <li><a class="dropdown-item" href="#">PHD</a></li>
-                                <li><a class="dropdown-item" href="#">Minors</a></li>
-                                <li><a class="dropdown-item" href="#">Certified Cources</a></li>
+                                <li><a class="dropdown-item" href="./mtech_program.html" id="mtech_pro"><span> M.Tech</span>.</a></li>
+                                <li><a class="dropdown-item" href="./dual_degree_program.html" id="dualdegree_pro"><span> Dual Degree</span></a></li>
+                                <li><a class="dropdown-item" href="./phd_program.html" id="phd_pro"><span> PHD</span></a></li>
+                                <li><a class="dropdown-item" href="./minors_program.html" id="minors_pro"><span> Minors</span></a></li>
+                                <li><a class="dropdown-item" href="./cirtifiedCourses_program.html" id="cirtifiedCourses_pro"><span> Certified Cources</span></a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -75,76 +72,78 @@
                                 <span>People <i class="bi bi-chevron-down"></i></span> 
                             </a>
                             <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="compiler.html"><span>Faculty</span></a></li>
-                                <li><a class="dropdown-item" href="#"><span>Student</span></a></li>
-                                <li><a class="dropdown-item" href="#"><span>Staff</span></a></li>
+                                <li><a class="dropdown-item" href="./faculty.html" id="drop_p"><span>Faculty</span></a></li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropbtn"><span class="d-flex justify-content-between">Student <i class="bi bi-chevron-right"></i></span></a>
+                                    <ul class="dropdown-content dropdown-menu shadow">
+                                        <a class="dropdown-item" href="./m_tech_students.html" id="drop_p"><span>M.Tech</span></a>
+                                        <a class="dropdown-item" href="./phd_students.html" id="drop_p"><span>PHD</span></a>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="./staff.html" id="drop_p"><span>Staff</span></a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span>Research</span></a>
+                            <a class="nav-link" href="./research.html" id="research"><span>Research</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="enterprise.html"><span>Events</span></a>
+                            <a class="nav-link" href="./events.html" id="events"><span>Events</span></a>
                         </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="./blog_list.html" id="blog"><span>Startups</span></a>
+                        </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="./contact.html" id="contact"><span>Contact</span></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     
     <!-- profiles -->
-    <div class="container" id="profilesContainer">
-        <h1 class="text-center mt-4 mb-5">Faculty Profiles</h1>
-        <div class="row" id="profilesRow">
-            <!-- Student profiles will be dynamically added here -->
-        </div>
+    <div class="container-fluid mt-5">
+        <h2 class="heading text-center mb-5"><span>Faculty Profiles</span></h2>
+        <div class="row row-cols-1 row-cols-md-3 g-3 faculty-profile-container" id="profilesContainer"></div>
     </div>
     
+
     <!-- Footer -->
     <footer class="py-5">
         <div class="container">
-            <div class="row px-3 px-md-0">
-                <div class="d-block em-txt">
-                    <a class="navbar-brand dark mb-3" href="#">
+            <div class="row px-md-0">
+                <div class="d-block">
+                    <a class="navbar-brand dark" href="#">
                         <img src="images/logo.png" class="img-fluid" alt="Logo">
+                        <sapn class="mx-2 em-txt">Department Of Entrepreneurship and Management</span>
                     </a>
-                    <span class="mx-2 d-inline">Department Of Entrepreneurship and Management</span>
                 </div>
                 <div class="row d-flex justify-content-between">
                     <div class="col-lg-3">
                         <address>
                             <span class="contact"><i class="bi bi-envelope"></i> <b> office@em.iith.ac.in</b></span>
-                            <span class="contact"><i class="bi bi-telephone"></i> +91 8500 099 499</span>
-                            <p>
-                                <b>Department of Entrepreneurship and Management,</b>
-                                Indian Institute of Technology Hyderabad,<br>
-                                Kandi, Sangareddy,<br>Telangana,<br> India. 502285.
-                            </p>
+                            <p><small>
+                            <span class="text-nowrap">Department Of Entrepreneurship and Management,</span><br>
+                            <span class="text-nowrap">Indian Institute of Technology Hyderabad,</span><br>
+                            <span class="text-nowrap">Kandi, Sangareddy,</span><br>
+                            <span class="text-nowrap">Telangana, India. 502285.</span>
+                            </small></p>
                         </address>
                     </div>
                     <div class="col-lg-3 col-6 mt-4 mt-md-0">
                         <ul>
-                            <li>Menu</li>
+                            <li>Important Links</li>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Acadmics</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Programs</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-6 mt-4 mt-md-0">
                         <ul>
-                            <li>Menu</li>
-                            <li><a href="#">Blogs</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li>Important Links</li>
+                            <li><a href="#">Programs</a></li>
+                            <li><a href="#">Projects</a></li>
                         </ul>
                     </div>
                 </div>
@@ -161,12 +160,22 @@
             </div>
         </div>
     </footer>
+    
 
+    <div class="loading-overlay" id="loading">
+        <div>
+            <img src="./images/logo.png" alt="University Logo" class="logo img-fluid mx-auto">
+            <p class="h6">Department of Entrepreneurship and Management</p>
+            <p>Indian Institute of Technology Hyderabad</p>
+        </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const loading = document.getElementById('loading');
-    loading.style.display = 'block';
+    loading.style.display = 'flex';
     let FULL_URL = 'https://script.google.com/macros/s/AKfycbyvgh9UYvH_AQ7Q8076RaF5-DPg35Ke5ZzklVQxkNIepuB4WFgyUcvbxbDtoeJSy-v-/exec';
     
     fetch(FULL_URL)
@@ -177,68 +186,30 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         return response.json();
     })
-    .then(studentsData => {
-        console.log(studentsData.data)
-        if (!Array.isArray(studentsData.data)) {
+    .then(facultyData => {
+        console.log(facultyData.data)
+        if (!Array.isArray(facultyData.data)) {
             throw new Error('Fetched data is not an array');
         }
-        const profilesRow = document.getElementById('profilesRow');
+        const profilesContainer = document.getElementById('profilesContainer');
         
         // studentsData is an object with a 'data' property containing an array of student objects
-        studentsData.data.slice(1).forEach(student => {
-            const cardColumn = document.createElement('div');
-            cardColumn.classList.add('col-md-6');
-            
-            const card = document.createElement('div');
-            card.classList.add('card', 'mb-4');
-            
-            const row = document.createElement('div');
-            row.classList.add('row', 'no-gutters');
-            
-            const imageColumn = document.createElement('div');
-            imageColumn.classList.add('col-md-4');
-            
-            const image = document.createElement('img');
-            image.classList.add('card-img');
-            image.src = student.image;
-            image.alt = student.name;
-            
-            const cardBodyColumn = document.createElement('div');
-            cardBodyColumn.classList.add('col-md-8');
-
-            const cardBody = document.createElement('div');
-            cardBody.classList.add('card-body');
-            
-            const title = document.createElement('h5');
-            title.classList.add('card-title');
-            title.textContent = student.name;
-            
-            const age = document.createElement('p');
-            age.classList.add('card-text');
-            age.textContent = `${student.roll_number}`;
-            
-            const major = document.createElement('p');
-            major.classList.add('card-text');
-            major.textContent = `${student.email}`;
-            
-            cardBody.appendChild(title);
-            cardBody.appendChild(age);
-            cardBody.appendChild(major);
-            
-            imageColumn.appendChild(image);
-            cardBodyColumn.appendChild(cardBody);
-            
-            row.appendChild(imageColumn);
-            row.appendChild(cardBodyColumn);
-            
-            // Append row to the card
-            card.appendChild(row);
-            
-            // Append card to the column
-            cardColumn.appendChild(card);
-            
-            // Append column to the profiles row
-            profilesRow.appendChild(cardColumn);
+        facultyData.data.slice(1).forEach(faculty => {
+            profilesContainer.innerHTML +=`
+            <div class="faculty-profile-card">
+            <img src="${faculty.image}" id="facultyImage" class="img-fluid" onerror="hideImg()"/>
+            <span class="card-title">
+                <h6>${faculty.name}</h6>
+                <p class="card-text designation">${faculty.designation}</p>
+            </span>
+            <div class="card-body">
+                <p>Email: ${faculty.email}</p>
+                <div class="social-icons">
+                    <a href="${faculty.profile_link}"><i class="bi bi-person-circle"></i> Profile</a>
+                </div>
+            </div>
+        </div>
+            `
         });
     })
     .catch(error => {
@@ -247,9 +218,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
