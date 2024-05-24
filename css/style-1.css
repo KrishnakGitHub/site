@@ -100,9 +100,20 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a {
     padding: 0.5rem 1rem;
 }
 
-header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
+/* header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
     color: #f8714c;
     background: none; 
+} */
+.dropdown-item.active, .dropdown-item:hover {
+    color: #f8714c;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #f8714c;
 }
 
 /* Logo */
@@ -179,7 +190,9 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
     margin-left: 100%;
     margin-top: -10%;
 }
-  
+
+/* Home Page */
+
 /* carousel */
 .overlay {
     position: absolute;
@@ -273,7 +286,7 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
     background: white;
     border-radius: 8px;
     text-align: center;
-    padding: 0px 80px;
+    /* padding: 0px 80px; */
 }
 
 select {
@@ -283,28 +296,74 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: border-color 0.3s;
-  }
-
-  select:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  /* input::-webkit-datetime-edit-month-field,
-  ::-webkit-datetime-edit-day-field,
-  ::-webkit-datetime-edit-text {
-    display:none;
-  }
-   */
-
-   ::-webkit-datetime-edit-month-field { color: white; }
-::-webkit-datetime-edit-day-field { color: red; }
-::-webkit-datetime-edit-year-field { color: red; }
-::-webkit-calendar-picker-indicator { background:gray; }
-
-  input[type="month"]::-webkit-calendar-picker {
-    display: none;
 }
 
+select:focus {
+    border-color: #f8714c;
+    outline: none;
+}
+
+.form-container select option:hover {
+    background: #f8714c;
+    outline: none;
+}
+
+
+/* vision-mision */
+
+.vision-mision{
+    padding: 80px 0;
+}
+.vision-mision .heading{
+    background: #f8714c;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.vision-mision .mission{
+    margin-top: 80px;
+}
+
+.vision-mision .card{
+    margin-top: 42px;
+    padding: 24px;
+    border: 2px solid #f8714c;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.vision-mision .card::before{
+    content: '';
+    position: absolute;
+    height: 62px;
+    top: -54px;
+    left: 45px;
+    background: #f8714c;
+    border: 2px solid #f8714c;
+    border-radius: 20px;
+}
+
+.vision-mision .card::after{
+    content: '';
+    position: absolute;
+    height: 62px;
+    left: auto;
+    right: 45px;
+    top: -54px;
+    background: #f8714c;
+    border: 2px solid #f8714c;
+    border-radius: 20px;
+}
+
+.vision-mision .img-box{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.vision-mision img{
+    width: 62%;
+}
 /* program offered */
 .program{
     color: #f8714c;
@@ -378,6 +437,12 @@ select {
 
 .events-row{
     text-align: start;
+    padding: 28px 0;
+}
+
+.news .card{
+    margin: 28px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #latestEvents .event-gallery-item img{
