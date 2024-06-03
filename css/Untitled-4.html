@@ -1,0 +1,145 @@
+
+}
+.slider-container {
+    position: relative; 
+    width:100%;
+    overflow: hidden;
+}
+.slider-track {
+    display: flex;
+    animation: scroll 20s linear 1s infinite;
+}
+.slider-track .card {
+    min-width: 300px;
+    margin: 0 1px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+.slider-track .card:hover {
+    max-width: 360px;
+}
+.slider-track .card:not(:hover) {
+    max-width: 300px;
+}
+.slider-track .card img {
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}  
+.slider-track .card:hover img {
+    transform: scale(1.1);
+}
+.slider-track .card-img-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+.slider-track .text-container{
+    position: absolute;
+    top: auto;
+    bottom: 0px;
+    padding: 20px;
+    left: 0;
+    background: rgb(248, 113, 76, 0.3);
+}
+.slider-track .card-title {
+    color: #f8714c;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.slider-track .card-text {
+    font-size: 1rem;
+    /* color: #6c757d; */
+}
+.slider-track > div {
+    display: flex;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% + 300px));
+        left: 0px;
+    }
+}
+
+
+<section class="achievements-section">
+    <p class="text-center heading mt-5"><span>Faculty Achievements</span></p>
+    <div class="">
+        <div class="my-5">
+            <div class="slider-container">
+              <div class="slider-track">
+                <div>
+                    <div class="card bg-dark text-white">
+                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <div class="text-container">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card bg-dark text-white">
+                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <div class="text-container">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card bg-dark text-white">
+                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <div class="text-container">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+                <div>
+                    <div class="card bg-dark text-white">
+                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <div class="text-container">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="card bg-dark text-white">
+                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <div class="text-container">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card bg-dark text-white">
+                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <div class="text-container">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                            </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>          
+    </div>
+</section>
