@@ -17,7 +17,7 @@
     <!-- <script src="https://kit.fontawesome.com/3aa7ed338d.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="./css/style-1.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <!--Header-->
@@ -99,10 +99,10 @@
         </nav>
     </header>
 
-    <h2 class="heading text-center mb-5"><span>Events At DEM</span></h2>
+    <!-- <h2 class="heading text-center mb-5"><span>Events At DEM</span></h2> -->
     
-
     <div class="container form-container">
+        <p class="text-center heading mt-5"><span>Events</span></p>
         <div class="">
             <form id="yearForm">
                 <select id="yearSelect" name="year" onchange="submitForm()"></select>
@@ -114,69 +114,68 @@
     <!-- Events Section -->
     <section class="events-section">
         <div class="container py-5" id="upev">
-            <h5 class="subheading mb-5"><span>Upcoming Events</span></h5>
+            <h5 class="heading text-start mb-5"><span>Upcoming Events</span></h5>
             <div class="row row-cols-1 row-cols-md-3 g-3" id="upcomingEvents"></div>
         </div>
 
 
         <div class="container py-5">
-            <h5 class="subheading mb-5"><span>Past Events</span></h5>
+            <h5 class="heading text-start mb-5"><span>Past Events</span></h5>
             <div class="row row-cols-1 row-cols-md-3 g-3" id="latestEvents"></div>
             <!-- <div class="accordion accordion-flush" id="latestEvents"></div> -->
         </div>
     </section>
     
-        <!-- Footer -->
-        <footer class="py-5">
-            <div class="container">
-                <div class="row px-md-0">
-                    <div class="d-block">
-                        <a class="navbar-brand dark" href="#">
-                            <img src="images/logo.png" class="img-fluid" alt="Logo">
-                            <sapn class="mx-2 em-txt">Department Of Entrepreneurship and Management</span>
-                        </a>
-                    </div>
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-lg-3">
-                            <address>
-                                <span class="contact"><i class="bi bi-envelope"></i> <b> office@em.iith.ac.in</b></span>
-                                <p><small>
-                                <span class="text-nowrap">Department Of Entrepreneurship and Management,</span><br>
-                                <span class="text-nowrap">Indian Institute of Technology Hyderabad,</span><br>
-                                <span class="text-nowrap">Kandi, Sangareddy,</span><br>
-                                <span class="text-nowrap">Telangana, India. 502285.</span>
-                                </small></p>
-                            </address>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-4 mt-md-0">
-                            <ul>
-                                <li>Important Links</li>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-4 mt-md-0">
-                            <ul>
-                                <li>Important Links</li>
-                                <li><a href="#">Programs</a></li>
-                                <li><a href="#">Projects</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 mt-md-0 d-flex justify-content-center">
-                        <ul>
-                            <div class="col-lg-6 d-flex">
-                                <li class="mx-0 me-md-3 px-md-0 px-1"><a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
-                                <li class="mx-0 me-md-3 px-md-0 px-1"><a href="#" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-                                <li class="mx-0 me-md-3 px-md-0 px-1"><a href="#" target="_blank"><i class="bi bi-youtube"></i></a></li>
-                                <li class="mx-0 me-md-3 px-md-0 px-1"><a href="#" target="_blank"><i class="bi bi-facebook"></i></a></li>
-                            </div>
-                        </ul>
-                    </div>
+        <!-- footer -->
+<footer>
+    <div class="container">
+        <div class="row px-md-0">
+            <div class="d-block">
+                <a class="navbar-brand dark" href="#">
+                    <img src="images/logo.png" class="img-fluid" alt="Logo">
+                    <sapn class="mx-2 em-txt">Department Of Entrepreneurship and Management</span>
+                </a>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-3">
+                    <address>
+                        <span class="contact"><i class="bi bi-envelope"></i> <b> office@em.iith.ac.in</b></span>
+                        <p><small>
+                            <span class="text-nowrap">
+                                Department Of Entrepreneurship and Management<br>
+                                Indian Institute of Technology Hyderabad,<br>
+                                Kandi, Sangareddy,<br>
+                                Telangana,<br>
+                                India. 502285.
+                            </span>
+                        </small></p>
+                    </address>
+                </div>
+                <div class="col-lg-3 col-6 mt-4 mt-md-0">
+                    <ul>
+                        <li>Important Links</li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./v&m.html">Vision and Mission</a></li>
+                        <li><a href="./programs.html">Acadmics</a></li>
+                        <li><a href="./events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 mt-4 mt-md-0">
+                    <ul>
+                        <li>Important Links</li>
+                        <li><a href="./research.html">Research</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
+            <div class="social-links">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
 
         <div class="loading-overlay" id="loading">
             <div>
@@ -270,15 +269,15 @@ document.addEventListener("DOMContentLoaded", function() {
         else {
             latestEvents.innerHTML += `
             <div class="col">
-                <div class="gallery-item event-gallery-item">
+                <div class="gallery-item event-gallery-item event-card">
                     <img src="${event.image}" alt="Image 2">
-                    <div class="text-box">
+                    <div class="text-box card-body">
                         <h5>${event.title}</h5>
                         <p class="event-date">${eventDate.toDateString()!='Invalid Date'?eventDate.toDateString().slice(3,):'----'}</p>
                     </div>
                     <div class="text-overlay">
                         <div class="text-overlay-content">
-                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal${event.id}">Read More</button>
+                            <button class="btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal${event.id}">Read More</button>
                         </div>
                     </div>
                 </div>

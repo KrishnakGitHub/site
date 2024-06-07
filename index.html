@@ -144,22 +144,24 @@
 
 <!-- News and Annocements -->
 <section class="news-section">
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="d-flex justify-content-between">
-                <p class="heading"><span>Upcoming Events</span></p>
-                <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="d-flex justify-content-between">
+                    <p class="heading"><span>Upcoming Events</span></p>
+                    <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+                </div>
+                <div id="Events" class="row events-row"></div>
             </div>
-            <div id="Events" class="row events-row"></div>
-        </div>
-        <div class="col-lg-4">
-            <div class="d-flex justify-content-between">
-                <p class="heading"><span>Announcements</span></p>
-                <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span>
-            </div>
-            <div class="card news-card">
-                <div class="card-body">
-                    <marquee id="news" direction="up" scrollamount="2" width="100%" height="240"></marquee>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-between">
+                    <p class="heading"><span>Announcements</span></p>
+                    <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+                </div>
+                <div class="card news-card">
+                    <div class="card-body">
+                        <marquee id="news" direction="up" scrollamount="2" width="100%" height="240"></marquee>
+                    </div>
                 </div>
             </div>
         </div>
@@ -168,91 +170,128 @@
 
 
 <section class="achievements-section">
-    <!-- <p class="text-center heading mt-5"><span>Faculty Achievements</span></p> -->
-    <div class="d-flex justify-content-between">
-        <p class="heading"><span>Faculty Achievements</span></p>
-        <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span>
-    </div>
-    <div class="">
-        <div class="">
-            <div class="slider-container">
-              <div class="slider-track">
-                <div>
-                    <div class="card bg-dark text-white">
-                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <div class="text-container">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
-                            </div>
-                        </div>
-                      </div>
-                      <div class="card bg-dark text-white">
-                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <div class="text-container">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
-                            </div>
-                        </div>
-                      </div>
-                      <div class="card bg-dark text-white">
-                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <div class="text-container">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
-                            </div>
-                        </div>
-                      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-between">
+                    <p class="heading"><span>Faculty Achievements</span></p>
+                    <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
                 </div>
-
-                <div>
-                    <div class="card bg-dark text-white">
-                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <div class="text-container">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                <div id="carouselExampleInterval" class="carousel slide slider-container" data-bs-ride="carousel">
+                    <div class="carousel-inner slider-track">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="card bg-dark text-white">
+                            <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <div class="text-container">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                                </div>
                             </div>
-                        </div>
+                          </div>    
                       </div>
-
-                      <div class="card bg-dark text-white">
-                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <div class="text-container">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <div class="card bg-dark text-white">
+                            <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <div class="text-container">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                                </div>
                             </div>
-                        </div>
+                          </div>
                       </div>
-                      <div class="card bg-dark text-white">
-                        <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <div class="text-container">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                      <div class="carousel-item">
+                        <div class="card bg-dark text-white">
+                            <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <div class="text-container">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                                </div>
                             </div>
-                        </div>
+                          </div>
                       </div>
-                </div>
-              </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
-          </div>          
+            <div class="col">
+                <div class="d-flex justify-content-between">
+                    <p class="heading"><span>Student Achievements</span></p>
+                    <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+                </div>
+                <div id="carouselExampleInterval" class="carousel slide slider-container" data-bs-ride="carousel">
+                    <div class="carousel-inner slider-track">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="card bg-dark text-white">
+                            <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <div class="text-container">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                                </div>
+                            </div>
+                          </div>    
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <div class="card bg-dark text-white">
+                            <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <div class="text-container">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card bg-dark text-white">
+                            <img src="./images/slider-slider-image-1.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <div class="text-container">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <!-- <p class="card-text">Last updated 3 mins ago</p> -->
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
     </div>
 </section>
 
 
-<section id="recentActivities" class="section">
+<section id="recentActivities" class="section recent-activities">
     <div class="container">
-        <h3 class="section-title heading"><span>Recent Activities</span></h3>
+        <div class="d-flex justify-content-between">
+            <p class="heading"><span>Recent Activities</span></p>
+            <!-- <span><a href="#" class="btn btn-short"><i class="bi bi-chevron-right"></i></a></span> -->
+        </div>
+        <!-- <h3 class="section-title heading"><span>Recent Activities</span></h3> -->
         <div class="gallery">
             <div class="gallery-item">
                 <img src="./images/act1.png" alt="Image 1">
@@ -311,8 +350,6 @@
         </div>
     </div>
 </section>
-
-
 
 
 <!-- footer -->
@@ -376,7 +413,7 @@
 </div>
 
 <!-- JavaScript to handle pausing and resuming the animation -->
-<script>
+<!-- <script>
   const sliderTrack = document.querySelector('.slider-track');
   const cards = document.querySelectorAll('.card');
 
@@ -389,7 +426,7 @@
       sliderTrack.style.animationPlayState = 'running';
     });
   });
-</script>
+</script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
@@ -397,7 +434,7 @@
     document.addEventListener("DOMContentLoaded", function() {
         const loading = document.getElementById('loading');
         loading.style.display = 'flex';
-        let FULL_URL = "https://script.google.com/macros/s/AKfycbzEYhOhlOqkxIDVp8slvNq0seUP_iZd9UjJxDKp2K2Fi0lwPkFMLrWhFLzrFMaWQiOc/exec";
+        let FULL_URL = "https://script.google.com/macros/s/AKfycbyOzxa0eiF8tjI7QSzgLxOwQZtV_5lyICf2kLBfzkWYuLPQ8C6-YuzaZUTdHMzEext5/exec";
         
         fetch(FULL_URL)
         .then(response => {
@@ -412,29 +449,34 @@
             if (!Array.isArray(eventsData.data)) {
                 throw new Error('Fetched data is not an array');
             }
+            console.log(eventsData);
             
             const currentDate = new Date();
             const Events = document.getElementById('Events');
     
             eventsData.data[0].forEach(event => {
+                const currentDate = new Date();
                 const eventDate = new Date(event.start_date);
+                const end_eventDate = new Date(event.end_data);
                 
-                Events.innerHTML += `
-                <div class="col-md-6">
-                                <div class="list-group-item list-group-item-action border mb-4 rounded">
-                                    <div class="d-flex w-100 justify-content-between align-items-center">
-                                        <div class="date">
-                                            <div class="month">${eventDate.toDateString().slice(3,8)}</div>
-                                            <div class="day">${eventDate.toDateString().slice(8,10)}</div>
-                                            <div class="year">${eventDate.toDateString().slice(10,)}</div>
-                                        </div>
-                                        <div class="info">
-                                            <h6 class="mb-1">${event.title}</h6>
-                                            <small class="text-body-secondary">${event.venue}</small>
-                                        </div>
-                                    </div>
+                if (eventDate > currentDate) {
+                    Events.innerHTML += `
+                    <div class="col-md-6">
+                        <div class="list-group-item list-group-item-action mb-4 rounded">
+                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                <div class="date">
+                                    <div class="month">${eventDate.toDateString().slice(3,8)}</div>
+                                    <div class="day">${eventDate.toDateString().slice(8,10)}</div>
+                                    <div class="year">${eventDate.toDateString().slice(10,)}</div>
                                 </div>
-                            </div>`;
+                                <div class="info">
+                                    <h6 class="mb-1">${event.title}</h6>
+                                    <small class="text-body-secondary">${event.venue}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                }
             });
     
             const News = document.getElementById('news');
