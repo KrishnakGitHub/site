@@ -528,6 +528,26 @@ header .navbar-nav .nav-item.dropdown .dropdown-menu li a span:hover {
     }
 }
 
+
+/* Contact */
+.contact-section{
+    background: transparent;
+    padding: 80px 40px;
+}
+
+.contact-section .contact-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 40px;
+}
+.contact-row i{
+    color: #f8714c;
+    margin-right: 8px;
+}
+.contact-row address, h6{
+    padding: 10px 0 0 0;
+}
+
 /* Footer */
 footer {
     border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
@@ -898,7 +918,22 @@ footer .navbar-brand img{
     }
 }
 
+/* Student Profile */
+#profilesRow {
+    position: relative;
+}
 
+#profilesRow img {
+    max-width: 540px;
+    padding: 0;
+    height: 200px;
+    object-fit: cover;
+}
+/* Research */
+#projectContainer table tr:first-child {
+    color: #f8714c;
+    font-weight: 600;
+}
 
 
 .pro-head {
@@ -1120,13 +1155,33 @@ footer .navbar-brand img{
     }
   }
 
+  .form-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
   form {
-    position: absolute;
-    left: auto;
-    right: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
   }
   form select {
     border: none;
     border-bottom: 2px solid #eee;
     padding: 10px;
   }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
